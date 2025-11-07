@@ -11,6 +11,11 @@ packer {
   }
 }
 
+variable "ssh_username" {
+  type    = string
+  default = "ubuntu"
+}
+
 source "amazon-ebs" "ubuntu" {
   ami_name      = "packer-ansible-nginx"
   instance_type = "t2.micro"
